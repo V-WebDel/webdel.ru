@@ -120,13 +120,292 @@ b, strong
   
 /* project styles */
 
-// header
+/* header */
+.header
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 100
+
+  &__line
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 100px
+
+  &__logo
+
+.logo
+  display: flex
+  flex-direction: column
+  align-items: center
+  line-height: 1
+  color: #ffffff
+
+  &:hover
+    color: #ffffff
+    text-decoration: none
+
+  &__name
+    font-family: $font-accent
+    font-size: 40px
+    font-weight: 700
+
+  &__description
+    font-size: 15px
+    font-weight: 300
+
+@keyframes hover-svg
+  0%
+    transform: scale(1)
+  
+  100%
+    transform: scale(1.2)
+
+@keyframes hover-svg-revers
+  0%
+    transform: scale(1.2)
+  
+  100%
+    transform: scale(1)
+
+.menu
+  
+  &_hidden
+    display: none
+
+  &_fixed
+    position: fixed
+    bottom: 50px
+    right: 50px
+    
+    .menu
+      &__list
+        flex-direction: column
+        padding: 10px 0
+        background-color: #005792
+        border-radius: 15px
+        border: 2px solid #ffffff
+        
+      &__item
+        min-width: 30px
+        margin: 0 12px
+
+      &__link
+        position: relative
+        flex-direction: row-reverse
+        justify-content: flex-start
+
+        &:hover
+          .menu__name
+            display: block
+            transition: all 0.3s linear, opacity 0.4s ease-in
+
+      &__name
+        position: absolute
+        top: 50%
+        right: 55px
+        display: none
+        width: auto
+        padding: 3px 6px
+        font-size: 16px
+        font-weight: 700
+        color: $text
+        text-align: right
+        line-height: 1
+        background-color: #ffffff
+        border: 2px solid $text
+        border-radius: 5px
+        transform: translateY(-50%)
+
+  &__list
+    display: flex
+
+  &__item
+    min-width: 110px
+    margin: 0 10px
+
+  &__link
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    height: 55px
+    font-family: $font-accent
+    font-size: 13px
+    font-weight: 300
+    color: #ffffff
+    text-transform: uppercase
+    transition: all 0.2s linear
+
+    &:hover
+      color: #ffffff
+      text-decoration: none
+
+      .menu__svg
+        animation-name: hover-svg
+        animation-duration: 0.3s
+        animation-iteration-count: 1
+        animation-play-state: running
+        animation-timing-function: ease
+        animation-fill-mode: both
+
+      .menu__name
+        //transform: translateY(3px)
+
+    &:active
+      color: darken(#ffffff, 20%)
+
+      .menu__svg
+        fill: darken(#ffffff, 20%)
+
+  &__svg
+    width: 30px
+    height: 30px
+    fill: #ffffff
+    animation-name: hover-svg-revers
+    animation-duration: 0.5s
+    animation-iteration-count: 1
+    animation-play-state: running
+    animation-timing-function: ease
+    animation-fill-mode: both
+    transition: fill 0.2s linear
+  
+    &_services
+      width: 26px
+    &_business
+      width: 28px
+
+  &__name
+    transition: $slowdown
+    
+
+/* toggle-menu */ 
+.toggle-menu
+  position: fixed
+  top: 20px
+  right: 30px
+  z-index: 100
+  display: none
+  width: 40px
+  height: 50px
+
+  span 
+    position: absolute
+    display: block
+    top: 50%
+    transform: translateY(-50%)
+
+    &::before, &::after 
+      content: ""
+      position: absolute
+      right: 0
+    
+    &::before
+      top: -12px
+
+    &::after
+      top: 12px
+
+  span, span:after, span:before
+    width: 100%
+    height: 4px 
+    background-color: $accent
+    border-radius: 2px
+    box-shadow: 0 0 1px 1px #ffffff
+    transition: $slowdown
 
 
-// section-name
+.toggle-menu_open
+  span 
+    background-color: transparent
+    box-shadow: none
+
+    &::after
+      height: 4px 
+      transform: translateY(-12px) rotate(45deg)
+
+    &::before
+      height: 4px 
+      transform: translateY(12px) rotate(-45deg)
 
 
-// footer
+/* page-project */
+.page-project
+  .header
+    position: relative
+    background-color: $text
+
+/* top */
+@keyframes phone-ring
+  0%
+    transform: translateZ(0)
+
+  15% 
+    transform: translate3d(-25%, 0, 0) rotate(-5deg)
+
+  30%
+    transform: translate3d(20%, 0, 0) rotate(3deg)
+
+  45%
+    transform: translate3d(-15%, 0, 0) rotate(-3deg)
+
+  60%
+    transform: translate3d(10%, 0, 0) rotate(2deg)
+
+  75% 
+    transform: translate3d(-5%, 0, 0) rotate(-1deg)
+
+
+.particles-js-canvas-el
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 0
+  
+.top
+  position: relative
+  width: 100vw
+  height: 100vh
+  padding-top: 100px
+  background-color: #005792
+  color: $text
+
+  &__wrap
+    position: relative
+    z-index: 1
+    width: 100%
+    color: #ffffff
+
+  &__title
+    margin-bottom: 15px
+    font-family: $font-accent
+    font-weight: 700
+    font-size: 55px
+    line-height: 1
+
+  &__subtitle
+    margin-bottom: 50px
+    font-family: $font-accent
+    font-size: 28px
+    font-weight: 400
+    line-height: 1.2
+
+  &__btn
+
+  &__desc-btn
+    margin-top: 8px
+    margin-left: 12px
+    font-size: 14px
+    font-weight: 300
+    font-style: italic
+    line-height: 1.2
+    letter-spacing: 1px
+      
+
 
 
 
