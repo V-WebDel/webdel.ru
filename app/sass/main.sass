@@ -40,13 +40,13 @@ b, strong
   font-weight: bold
 
 .btn
-  padding: 15px
+  padding: 10px 40px
   font-size: 18px
-  font-weight: 700
+  font-weight: 400
   color: #ffffff
   text-transform: uppercase
   background-color: $accent
-  border: none
+  border: 2px solid #ffffff
   border-radius: 30px
   transition: $slowdown
   cursor: pointer
@@ -54,8 +54,10 @@ b, strong
   &:hover
     color: #ffffff
     text-decoration: none
-    background-color: lighten($accent, 10%)
-    box-shadow: 0 2px 9px 3px rgba(0, 0, 0, 0.2)
+    background-color: rgba(#ffffff, 0.1)
+
+  &:active
+    transform: translateY(5px)
 
 .link-btn
   display: block
@@ -78,18 +80,25 @@ b, strong
   padding: 0
   list-style: none
   
-h1, h2, h3, h4
-  font-weight: 700
-  color: $title
-  line-height: 1.2
-
+.container-relative
+  position: relative
+  height: 100%
+  
 .title-text
+  position: relative
   margin-bottom: 0
-  font-size: 24px
+  font-family: $font-accent
+  font-size: 34px
   font-weight: 700
   text-align: center
   text-transform: uppercase
   line-height: 1.2
+
+  &_revers
+    color: #eeeeee
+  
+  &_ttn
+    text-transform: none
 
 .text-accent
   color: $accent
@@ -103,9 +112,11 @@ h1, h2, h3, h4
 .text-nowrap
   white-space: nowrap
 
-.container-relative
-  position: relative
+.container-100, .row-100
   height: 100%
+
+.section
+  padding-top: 60px
   
 /* project styles */
 
