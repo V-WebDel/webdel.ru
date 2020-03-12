@@ -840,6 +840,91 @@ b, strong
       transform: translate(-50%, -50%)
 
 
+/* project */  
+.project
+
+  &__wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top: 40px
+
+  &__block
+
+    &_left
+      width: 50%
+
+    &_center
+      width: 13%
+
+    &_right
+      width: 33%
+
+  &__title
+    margin-top: 0
+    margin-bottom: 10px
+    font-family: $font-accent
+    font-size: 28px
+
+  &__subtitle
+    margin-top: 0
+    margin-bottom: 10px
+    font-family: $font-accent
+    font-size: 24px
+
+  &__text
+    margin-bottom: 20px
+    margin-left: 30px
+    font-size: 18px
+    line-height: 1.3
+
+  &__list
+    display: flex
+    flex-direction: column
+    margin-bottom: 20px
+    margin-left: 30px
+
+  &__list-item
+    position: relative
+    margin-bottom: 10px
+    padding-left: 15px
+    font-size: 18px
+    line-height: 1.3
+
+    &::before
+      content: ''
+      position: absolute
+      top: 8px
+      left: 0
+      width: 7px
+      height: 7px
+      background-color: $accent
+      border-radius: 50%
+
+  &__link
+    margin-left: 30px
+    font-family: $font-accent
+    font-size: 22px
+    font-weight: 700
+    color: $accent
+    transition: $slowdown
+
+    &:hover
+      color: darken($accent, 20%) 
+      text-decoration: none
+
+  &__image
+
+    &_main
+      margin: 0 auto
+      img
+        margin: 0 auto
+        border: 4px solid $accent
+        
+    &_mobile
+      width: 100%
+
+
 /* footer */
 .footer
   color: #ffffff
@@ -1040,5 +1125,5 @@ b, strong
       fill: lighten($accent, 20%)
       transform: scale(1.2)
 
-      
+
 @import "media" // Always at the end

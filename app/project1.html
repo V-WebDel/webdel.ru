@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+ 
+<head>
+
+  <title>Webdel создание сайтов и верстка шаблонов</title>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900|Roboto:300,400,500,700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body class="page-project">
+
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="header__line">
+            <a class="header__logo logo" href="#">
+              <span class="logo__name">WebDel</span>
+              <span class="logo__description">Создание сайтов</span>
+            </a>
+            <div class="header__wrap">
+              <nav class="header__menu menu">
+                <ul class="menu__list lst">
+                  <li class="menu__item">
+                    <a class="menu__link" href="index.html#advantages">
+                      <svg class="menu__svg menu__svg_like">
+                        <use xlink:href="img/sprite.svg#like"></use>
+                      </svg>
+                      <span class="menu__name">Преимущества</span>
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="index.html#services">
+                      <svg class="menu__svg menu__svg_services">
+                        <use xlink:href="img/sprite.svg#customer-support"></use>
+                      </svg>
+                      <span class="menu__name">Услуги</span>
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="index.html#resume">
+                      <svg class="menu__svg menu__svg_business">
+                        <use xlink:href="img/sprite.svg#business"></use>
+                      </svg>
+                      <span class="menu__name">Резюме</span>
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="index.html#portfolio">
+                      <svg class="menu__svg menu__svg_briefcas">
+                        <use xlink:href="img/sprite.svg#briefcas"></use>
+                      </svg>
+                      <span class="menu__name">Портфолио</span>
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#contacts">
+                      <svg class="menu__svg menu__svg_contacts">
+                        <use xlink:href="img/sprite.svg#contact"></use>
+                      </svg>
+                      <span class="menu__name">Контакты</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="project section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="title-text title-text_ttn wow">Проект «Петербургская компьютерная помощь»</h2>
+        </div>
+        <div class="col-12">
+          <div class="project__wrap">
+            <div class="project__block project__block_left">
+              <h3 class="project__title">Описание проекта:</h3>
+              <p class="project__text">Создание многостраничного сайта для<br> «Петербургская компьютерная помощь» - ремонт компьютерной техники</p>
+              <h4 class="project__subtitle">Выполненная работа:</h4>
+              <ul class="project__list lst">
+                <li class="project__list-item">Верстка шаблона с использованием Bootstrap4</li>
+                <li class="project__list-item">Правки после посадки верстки на CMS WordPress</li>
+                <li class="project__list-item">Наполение сайта контентом</li>
+                <li class="project__list-item">Добавление новых секций</li>
+              </ul>
+              <h4 class="project__subtitle">Ссылка на проект:</h4>
+              <a class="project__link" href="https://pkp-service.ru/">pkp-service.ru</a>
+            </div>
+            <div class="project__block project__block_center">
+              <picture class="project__image project__image_main">
+                <source srcset="./img/webp/portfolio/1_mobile.webp, ./img/webp/portfolio/1_mobile@2x.webp 2x" type="image/webp">
+                <img src="./img/portfolio/1_mobile.jpg" 
+                    srcset="./img/portfolio/1_mobile@2x.jpg 2x"
+                    alt="Макет мобильная версия">
+              </picture>
+            </div>
+            <div class="project__block project__block_right">
+              <picture class="project__image project__image_main">
+                <source srcset="./img/webp/portfolio/1_desktop.webp, ./img/webp/portfolio/1_desktop@2x.webp 2x" type="image/webp">
+                <img src="./img/portfolio/1_desktop.jpg" 
+                    srcset="./img/portfolio/1_desktop@2x.jpg 2x"
+                    alt="Макет десктопная версия">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts section" id="contacts">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="title-text wow">Есть вопросы?</h3>
+        </div>
+        <div class="col-12 col-md-6 d-flex align-items-center">
+          <ul class="contacts-list lst">
+            <li class="contacts-list__item contacts-list__item_phone">
+              <span>
+                <svg class="contacts-list__svg">
+                  <use xlink:href="img/sprite.svg#smartphone"></use>
+                </svg>
+              </span> 
+              <a class="contacts-list__link" href="tel:89500122485">+7 (950) 012-24-85</a>
+            </li>
+            <li class="contacts-list__item">
+              <span>
+                <svg class="contacts-list__svg">
+                  <use xlink:href="img/sprite.svg#email"></use>
+                </svg>
+              </span> 
+              viktor.webdel@gmail.com
+            </li>
+            <li class="contacts-list__item">
+              <span>
+                <svg class="contacts-list__svg">
+                  <use xlink:href="img/sprite.svg#telegram"></use>
+                </svg>
+              </span> 
+              @viktorkryzhnyi
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6">
+          <form class="form form__callback" action="">
+            <h3 class="form__title">Отвечу на ваши вопросы</h3>
+            <div class="form__wrap">
+              <input class="form__field" name="name" type="text" placeholder="Ваше имя" required>
+              <input class="form__field" name="phone" type="tel" placeholder="Ваш телефон" required>
+              <textarea class="form__textarea" name="text" rows="6" placeholder="Ваш вопрос..." required></textarea>
+              <button class="btn form__btn wow" type="submit">Записаться</button>
+              <label class="form__checkbox checkbox">
+                <input class="checkbox__default" type="checkbox" name="checkbox" value="ready" checked required>
+                <div class="checkbox__new"></div>
+                Нажимая на кнопку, вы даете <a href="/personal.php">согласие на обработку своих персональных данных</a>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- start footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="footer__wrap">
+            <div class="footer__column footer__column_left">
+              <a class="footer__logo logo" href="#">
+                <span class="logo__name">WebDel</span>
+                <span class="logo__description">Создание сайтов</span>
+              </a>
+            </div>
+            <div class="footer__column footer__column_right">
+              <div class="footer__block footer__block_contacts">
+                <button class="btn footer__btn modal-btn">Оставить заявку</button>
+                <ul class="social__lst lst">
+                  <li class="social__item">
+                    <a href="https://tele.click/@viktorkryzhnyi">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#telegramm"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="https://wa.me/79500122485">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#whatsapp"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="https://vk.com/v.kryzhny">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#vk"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="social__item">
+                    <a href="mailto:viktor.webdel@gmail.com">
+                      <svg>
+                        <use xlink:href="img/sprite.svg#gmail"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__block footer__block_payment">
+                <span class="payment__text">Способы оплаты:</span>
+                <ul class="payment__lst lst">
+                  <li class="payment__item">
+                    <svg class="svg_x2">
+                      <use xlink:href="img/sprite.svg#webmoney-pay"></use>
+                    </svg>
+                  </li>
+                  <li class="payment__item">
+                    <svg class="svg_x2">
+                      <use xlink:href="img/sprite.svg#yandex-pay"></use>
+                    </svg>
+                  </li>
+                  <li class="payment__item">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#paypal"></use>
+                    </svg>
+                  </li>
+                  <li class="payment__item">
+                    <svg>
+                      <use xlink:href="img/sprite.svg#visa"></use>
+                    </svg>
+                  </li>
+                  <li class="payment__item">
+                    <svg class="svg_x1">
+                      <use xlink:href="img/sprite.svg#mastercard"></use>
+                    </svg>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="btn-top no-btn">
+    <svg>
+      <use xlink:href="img/sprite.svg#up-arrow"></use>
+    </svg>
+  </button>
+   
+  <div class="section-modal">
+
+    <div class="overlay hidden">
+      <button class="no-btn modal__close">
+        <svg><use xlink:href="img/sprite.svg#close"></use></svg>
+      </button>
+    </div>
+
+    <div class="modal hidden">
+      <div class="modal__wrap">
+        <form class="form" action="">
+          <h3 class="form__title">Форма заявки</h3>
+          <div class="form__wrap form__wrap_modal">
+            <input class="form__field" name="name" type="text" placeholder="Ваше имя" required>
+            <input class="form__field" name="phone" type="tel" placeholder="Ваш телефон" required>
+            
+            
+
+            <select class="form__select" name="service" aria-invalid="false">
+              <option disabled selected>Выбрать услугу</option>
+              <option value='Создание сайта "Под ключ"'>Создание сайта</option>
+              <option value="HTML-верстка шаблона">Верстка шаблона</option>
+              <option value="Сайт на WordPress">Сайт на WordPress</option>
+              <option value="Консультация по верстке">Консультация по верстке</option>
+              <option value="Модернизация сайта">Модернизация сайта</option>
+            </select>
+            <textarea class="form__textarea" name="text" rows="6" placeholder="Краткое описание проекта"></textarea>
+            
+            <div class="form__radio">
+              <span class="form__radio-title">Время на разработку:</span>
+              <div class="radio">
+                <input class="radio__input" id="urgently" name="time" type="radio" value="Срочно" checked>
+                <label class="radio__label" for="urgently"><span></span>Срочно</label>
+              </div>
+              <div class="radio">
+                <input class="radio__input" id="not urgent" name="time" type="radio" value="Не срочно">
+                <label class="radio__label" for="not urgent"><span></span>Не срочно</label>
+              </div>
+            </div>
+
+            <div class="form__radio">
+              <span class="form__radio-title">Есть ли ТЗ?</span>
+              <div class="radio">
+                <input class="radio__input" id="no" name="TZ" type="radio" value="Нет" checked>
+                <label class="radio__label" for="no"><span></span>Нет</label>
+              </div>
+              <div class="radio">
+                <input class="radio__input" id="yes" name="TZ" type="radio" value="Есть">
+                <label class="radio__label" for="yes"><span></span>Есть</label>
+              </div>
+            </div>
+            
+            <button class="form__btn btn" type="submit">Отправить заявку</button>
+            
+            <label class="form__checkbox checkbox">
+              <input class="checkbox__default" type="checkbox" name="checkbox" value="ready" checked required>
+              <div class="checkbox__new"></div>
+              Нажимая на кнопку, вы даете <a href="/personal.php">согласие на обработку своих персональных данных</a>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/svgxuse.min.js"></script>
+  <script src="js/particles.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
