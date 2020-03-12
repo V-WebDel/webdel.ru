@@ -938,5 +938,107 @@ b, strong
         width: 70px
         height: 70px
 
+/* modal */
+.modal
   
+  &__overlay
+    display: block
+    position: fixed
+    top: 50%
+    left: 50%
+    z-index: 200
+    width: 100vw
+    height: 100vh
+    background-color: rgba(#ffffff, 0.85)
+    transform: translate(-50%, -50%)
+
+  &__close
+    position: fixed
+    top: 30px
+    right: 40px
+    z-index: 301
+    width: 30px
+    height: 30px
+    cursor: pointer
+    transition: $slowdown
+
+    &:hover
+      svg
+        fill: lighten(#005792, 20%)
+
+    svg
+      fill: #005792
+      width: 30px
+      height: 30px
+  
+  &__wrap
+    position: fixed
+    top: 50%
+    left: 50%
+    z-index: 300
+    width: 480px
+    padding: 40px 0
+    background-color: #ffffff
+    border: 2px solid rgba($text, 0.6)
+    border-radius: 30px
+    transform: translate(-50%, -50%)
+
+  &__title
+    margin-bottom: 30px
+    font-size: 20px
+    font-weight: 400
+    text-align: center
+
+    span
+      line-height: 1
+
+.hidden
+  display: none
+
+/* btn-top */
+@keyframes jump-btn
+  0%
+    transform: translateY(0) 
+  40%
+    transform: translateY(-20px)
+  60%
+    transform: translateY(-20px)
+  100%
+    transform: translateY(0)
+
+
+.btn-top
+  position: fixed
+  bottom: 40px
+  left: 40px
+  z-index: 100
+  width: 50px
+  height: 50px
+  box-sizing: border-box
+  opacity: 0
+  transition: all 0.3s ease
+
+  svg
+    width: 100%
+    height: 100%
+    fill: $accent 
+    transition: $slowdown
+
+  &_active
+    opacity: 1
+    animation-name: jump-btn
+    animation-duration: 2s
+    animation-delay: 4s
+    animation-iteration-count: infinite
+    animation-play-state: running
+    animation-timing-function: easy-in
+
+  &:hover
+    animation-play-state: paused
+
+    svg
+      fill: lighten($accent, 20%)
+      transform: scale(1.2)
+
+      
 @import "media" // Always at the end

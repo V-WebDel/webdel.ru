@@ -563,6 +563,74 @@
       </div>
     </div>
   </footer>
+
+  <button class="btn-top no-btn">
+    <svg>
+      <use xlink:href="img/sprite.svg#up-arrow"></use>
+    </svg>
+  </button>
+   
+  <div class="modal">
+
+    <div class="modal__overlay hidden">
+      <button class="no-btn modal__close">
+        <svg><use xlink:href="img/sprite.svg#close"></use></svg>
+      </button>
+    </div>
+
+    <div class="modal__wrap hidden">
+      <form class="form form_modal" action="">
+        <h3 class="form__title">Форма заявки</h3>
+        <div class="form__wrap form__wrap_modal">
+
+          <input class="form__field" name="name" type="text" placeholder="Ваше имя" required>
+          <input class="form__field" name="phone" type="tel" placeholder="Ваш телефон" required>
+
+          <select class="form__select" name="service" aria-invalid="false">
+            <option disabled selected>Выбрать услугу</option>
+            <option value='Создание сайта "Под ключ"'>Создание сайта</option>
+            <option value="HTML-верстка шаблона">HTML-верстка шаблона</option>
+            <option value="Сайт на WordPress">Сайт на CMS WordPress</option>
+            <option value="Модернизация сайта">Правки на готовом сайте</option>
+          </select>
+          <textarea class="form__textarea" name="text" rows="6" placeholder="Краткое описание проекта"></textarea>
+          
+          <div class="form__radio">
+            <span class="form__radio-title">Время на разработку:</span>
+            <div class="radio">
+              <input class="radio__input" id="urgently" name="time" type="radio" value="Срочно" checked>
+              <label class="radio__label" for="urgently"><span></span>Срочно</label>
+            </div>
+            <div class="radio">
+              <input class="radio__input" id="not_urgent" name="time" type="radio" value="Не срочно">
+              <label class="radio__label" for="not_urgent"><span></span>Не срочно</label>
+            </div>
+          </div>
+
+          <div class="form__radio">
+            <span class="form__radio-title">Есть ли ТЗ?</span>
+            <div class="radio">
+              <input class="radio__input" id="no" name="TZ" type="radio" value="Нет" checked>
+              <label class="radio__label" for="no"><span></span>Нет</label>
+            </div>
+            <div class="radio">
+              <input class="radio__input" id="yes" name="TZ" type="radio" value="Есть">
+              <label class="radio__label" for="yes"><span></span>Есть</label>
+            </div>
+          </div>
+          
+          <button class="form__btn btn" type="submit">Отправить заявку</button>
+          
+          <label class="form__checkbox checkbox">
+            <input class="checkbox__default" type="checkbox" name="checkbox" value="ready" checked required>
+            <span class="checkbox__new"></span>
+            Нажимая на кнопку, вы даете <a href="/personal.php">согласие на обработку своих персональных данных</a>
+          </label>
+        </div>
+      </form>
+    </div>
+
+  </div>
    
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
