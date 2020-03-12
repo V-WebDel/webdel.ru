@@ -62,6 +62,105 @@ $(function () {
     }, 1500);
   });
 
+  // Section modal
+  $(".modal-btn").click(function (evt) {
+    evt.preventDefault();
+
+    $(".modal__wrap").removeClass("hidden");
+    $(".modal__overlay").removeClass("hidden");
+
+  });
+  $(".modal__overlay, .modal__close").click(function () {
+    $(".modal__wrap").addClass("hidden");
+    $(".modal__overlay").addClass("hidden");
+  });
+  $(document).keyup(function (e) {
+    if (e.keyCode === 27) {
+      $(".modal__wrap").addClass("hidden");
+      $(".modal__overlay").addClass("hidden");
+    }
+  });
+
+  // Hidden portfolio item
+  let count_items = $(".portfolio__item").length
+
+  if (count_items > 3) {
+    $(".portfolio__item").slice(3).hide()
+  }
+
+  $(".portfolio__btn").click(function () {
+
+    $(this).siblings('.portfolio__wrap').find('.portfolio__item:not(:visible):lt(3)').show();
+
+    let hide_items = $(".portfolio__item:hidden").length
+
+    if (hide_items == 0) {
+      $(this).hide()
+    }
+
+  });
+
+  // Top bottom 
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > $(this).height()) {
+      $(".btn-top").addClass("btn-top_active");
+    } else {
+      $(".btn-top").removeClass("btn-top_active");
+    }
+  });
+
+  $("body").on("click", ".btn-top", function () {
+    $("html, body").animate({
+      scrollTop: 0
+    }, "slow");
+  });
+
+  // WOW
+  var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 100,
+    mobile: false,
+    live: true,
+    callback: function (box) {
+
+    },
+    scrollContainer: null
+  });
+  wow.init();
+
+  // Animate.css
+  $('.top__title, .top__subtitle').addClass('animated fadeInLeft');
+  $('.services__item').addClass('animated fadeInRight');
+  $('.btn').addClass('animated flash');
+  $('.title-text').addClass('animated zoomIn');
+  $('.advantages__item').addClass('animated fadeInUp');
+
+
+  // Отправка данных на сервер
+  $('#form').trigger('reset');
+
+  $('.form_modal, .form_callback').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+      url: 'send.php',
+      type: 'POST',
+      contentType: false,
+      processData: false,
+      data: new FormData(this),
+      success: function (msg) {
+        console.log(msg);
+        if (msg == 'ok') {
+          alert('Сообщение отправлено');
+          $('.form').trigger('reset');
+        } else {
+          alert('Ошибка');
+        }
+      }
+    });
+
+  });
 });
 
 var lazyLoadInstance = new LazyLoad({
