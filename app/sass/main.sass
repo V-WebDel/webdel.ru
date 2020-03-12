@@ -839,4 +839,104 @@ b, strong
       border-radius: 4px
       transform: translate(-50%, -50%)
 
+
+/* footer */
+.footer
+  color: #ffffff
+  background-color: #005792
+  padding: 40px 0
+
+  &__wrap
+    display: flex
+    
+
+  &__column
+    display: flex
+
+    &_left
+      align-items: center
+      width: 35%
+      padding: 0 30px
+
+    &_right
+      flex-direction: column
+      width: 65%
+
+  &__block
+    display: flex
+    padding: 0 30px
+
+    &_contacts
+      margin-bottom: 20px
+
+    &_payment
+      align-items: center
+      margin-bottom: 10px
+
+  &__btn
+    margin-right: auto
+
+  &__bottom
+    display: flex
+    justify-content: space-between
+    margin-top: 20px
+    padding: 0 30px
+
+  &__copyright
+    font-size: 12px
+
+  &__politic
+    font-size: 12px
+    color: #ffffff
+
+    &:hover
+      text-decoration: none
+      color: darken(#ffffff, 20%)
+
+.social
+  &__lst
+    display: flex
+    align-items: center
+
+  &__item
+    padding: 5px
+    margin-left: 20px
+
+    svg
+      width: 25px
+      height: 25px
+
+    .svg
+      &_white
+        fill: #ffffff
+        width: 27px
+        height: 27px
+
+.payment
+  &__text
+    margin-left: 10px
+    margin-right: auto
+
+  &__lst
+    display: flex
+    align-items: center
+
+  &__item
+    padding: 0 5px
+    margin-left: 20px
+
+    svg
+      width: 60px
+      height: 60px
+
+    .svg
+      &_x1
+        width: 55px
+        height: 55px
+
+      &_x2
+        width: 70px
+        height: 70px
+
+  
 @import "media" // Always at the end
