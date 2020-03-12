@@ -337,7 +337,7 @@ b, strong
     position: relative
     background-color: $text
 
-  
+
 /* top */
 @keyframes phone-ring
   0%
@@ -500,6 +500,105 @@ b, strong
     margin-bottom: 0
     font-size: 18px
     line-height: 1.4
+
+
+/* resume */
+.resume
+  padding-bottom: 60px
+
+  &__wrap
+
+  &__block
+    display: flex
+    justify-content: space-between
+    margin-top: 20px
+
+  &__foto
+    width: 30%
+    margin-top: 45px
+
+  &__info
+    width: 70%
+    padding-left: 20px
+
+  &__title
+    margin-top: 30px
+    margin-bottom: 15px
+    font-family: $font-accent
+    font-size: 28px
+    font-weight: 700
+    line-height: 1
+
+  &__text
+    margin-left: 50px
+    margin-bottom: 10px
+    font-size: 20px
+    
+  &__skill
+    margin: 30px
+    margin-left: 50px
+    margin-bottom: 40px
+    margin-right: 0
+
+.skill
+  
+  &__text
+    margin-bottom: 15px
+    font-size: 20px
+
+  &__wrap
+    position: relative
+    height: 4px
+    width: 100%
+    margin-bottom: 30px
+    background-color: rgba($accent, 0.6)
+
+    &::before, &::after
+      content: ''
+      position: absolute
+      top: 50%
+      height: 19px
+      width: 6px
+      transform: translateY(-50%)
+      border-radius: 2px
+      
+    &::before
+      left: 0
+      background-color: $text
+
+    &::after
+      right: 0
+      background-color: $accent
+
+  &__line
+    position: absolute
+    top: 50%
+    height: 11px
+    background-color: $text
+    border-top-right-radius: 2px
+    border-bottom-right-radius: 2px
+    transform: translateY(-50%)
+
+    &_htmlcss
+      width: 95%
+    &_jquery
+      width: 88%
+    &_js
+      width: 37%
+    &_php
+      width: 25%
+      
+  &__count
+    position: absolute
+    right: -8px
+    bottom: -22px
+    color: $accent
+
+    &::before
+      content: '%'
+      position: absolute
+      right: -12px
+      bottom: 0
 
 
 
