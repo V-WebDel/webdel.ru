@@ -13,6 +13,19 @@
     &__inner
       height: 400px
 
+  /* project */  
+  .project
+    &__block
+      &_left
+        width: 410px
+      &_center
+        width: 140px
+      &_right
+        width: 350px
+
+    &__text, &__list-item
+      line-height: 1.2
+
   /* contacts */
   .contacts
     &-list
@@ -101,6 +114,25 @@
     &__inner
       height: 310px
       
+  /* project */  
+  .project
+    &__block
+      &_left
+        width: 300px
+      &_center
+        width: 100px
+        min-height: 1500px
+      &_right
+        width: 260px
+        min-height: 600px
+
+    &__title
+      font-size: 24px
+    &__subtitle
+      font-size: 20px
+
+    &__text, &__list-item
+      font-size: 16px
 
   /* contacts */
   .contacts-list
@@ -384,11 +416,18 @@
 
   /* contacts */
   .contacts-list
+    margin: 30px auto
     &__item
+      margin-bottom: 15px
       font-size: 18px
 
   /* project */  
   .project
+    padding-top: 40px
+
+    &__wrap
+      margin-top: 25px
+
     &__block
       &_center
         display: none
@@ -397,13 +436,20 @@
 
     &__title
       margin-bottom: 5px
-      font-size: 24px
       line-height: 1
 
     &__subtitle
       margin-bottom: 5px
-      font-size: 20px
       line-height: 1
+
+    &__text
+      margin-bottom: 15px
+
+    &__list
+      margin-bottom: 10px
+
+    &__list-item
+      margin-bottom: 6px
 
   /* footer */
   .footer

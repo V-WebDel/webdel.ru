@@ -159,16 +159,22 @@
           </ul>
         </div>
         <div class="col-12 col-md-6">
-          <form class="form form__callback" action="">
-            <h3 class="form__title">Отвечу на ваши вопросы</h3>
+          <form class="form form_callback" enctype="multipart/form-data" method="post">
+            <div class="form__success">
+              <span>Спасибо за вашу заявку!</span>
+            </div>
+
+            <h3 class="form__title">Форма обратной связи</h3>
+
             <div class="form__wrap">
               <input class="form__field" name="name" type="text" placeholder="Ваше имя" required>
               <input class="form__field" name="phone" type="tel" placeholder="Ваш телефон" required>
               <textarea class="form__textarea" name="text" rows="6" placeholder="Ваш вопрос..." required></textarea>
-              <button class="btn form__btn wow" type="submit">Записаться</button>
+              <button class="btn form__btn wow" type="submit">Отправить</button>
+              
               <label class="form__checkbox checkbox">
                 <input class="checkbox__default" type="checkbox" name="checkbox" value="ready" checked required>
-                <div class="checkbox__new"></div>
+                <span class="checkbox__new"></span>
                 Нажимая на кнопку, вы даете <a href="/personal.php">согласие на обработку своих персональных данных</a>
               </label>
             </div>
