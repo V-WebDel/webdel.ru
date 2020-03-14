@@ -139,28 +139,27 @@ $(function () {
 
 
   // Отправка данных на сервер
-  $('#form').trigger('reset');
-
-  $('.form_modal, .form_callback').on('submit', function (e) {
-    e.preventDefault();
+  $('.form_modal, .form_callback').on('submit', function(evt) {
+    evt.preventDefault();
     $.ajax({
       url: 'send.php',
       type: 'POST',
       contentType: false,
       processData: false,
       data: new FormData(this),
-      success: function (msg) {
+      success: function(msg) {
         console.log(msg);
         if (msg == 'ok') {
-          alert('Сообщение отправлено');
-          $('.form').trigger('reset');
+          $('.modal').trigger('reset'); // очистка формы
+          $(".modal__wrap").addClass("hidden");
+          $(".modal__overlay").addClass("hidden");
         } else {
-          alert('Ошибка');
+          alert('При отправки произошла ошибка!');
         }
       }
     });
-
   });
+  
 });
 
 var lazyLoadInstance = new LazyLoad({
