@@ -1,40 +1,479 @@
 @import "vars"
 
-
-/*==========  Desktop First  ==========*/
-
 // ≥1200px
 @media screen and (max-width: 1200px)
-  .section-mt
-    margin-top: 50px
-    
-  /* header */  
+  /* header */
+  .menu
+    right: 30px
   
-  
+  /* portfolio */
+  .portfolio
+    &__item
+      width: 280px
+    &__inner
+      height: 400px
+
+  /* contacts */
+  .contacts
+    &-list
+      margin-left: 20px
+
+  /* form */
+  .form
+    &__textarea
+      height: 130px
+
+  /* modal */
+  .modal
+    &__wrap
+      padding: 30px 0
+
+  /* btn-top */
+  .btn-top
+    left: 20px
+
 // ≥992px
 @media screen and (max-width: 992px)
-  .section-mt
-    margin-top: 40px
-    
-  /* header */ 
-  
-  
+  /* header */
+  .logo
+    &__name
+      font-size: 34px
+
+    &__description
+      font-size: 14px
+
+  .menu
+    &_fixed
+      .menu
+        &__item
+          margin: 0 8px
+        &__link
+          display: flex
+          justify-content: center
+
+    &__item
+      min-width: 70px
+      margin: 0 8px
+    &__link
+      height: 50px
+      font-size: 12px
+    &__svg
+      width: 25px
+      height: 25px
+
+  /* top */
+  .top
+    &__title
+      font-size: 50px
+    &__subtitle
+      font-size: 24px
+    &__desc-btn
+      font-size: 12px
+
+  /* services */
+  .services
+    &__list
+      width: 100%
+
+  /* resume */
+  .resume
+    &__foto
+      width: 40%
+    &__info
+      width: 60%
+    &__title
+      font-size: 24px
+    &__text
+      margin-left: 30px
+      font-size: 18px
+    &__skill
+      margin-left: 30px
+
+  /* portfolio */
+  .portfolio
+    &__wrap
+      justify-content: space-between
+      margin: 30px 0
+    &__item
+      width: 220px
+      margin-bottom: 15px
+      border: 4px solid $accent
+    &__inner
+      height: 310px
+      
+
+  /* contacts */
+  .contacts-list
+    margin-left: 0
+    &__item
+      margin-bottom: 20px
+      font-size: 20px
+    &__svg
+      width: 30px
+      height: 30px
+
+  /* form */
+  .form
+    &_callback
+      width: 360px
+      &::before
+        left: -10px
+    &__wrap
+      width: 270px
+
+      &_modal
+        width: 350px
+
+    &__radio
+      font-size: 14px
+
+  /* footer */
+  .footer
+    &__wrap
+      flex-direction: column
+
+    &__column
+      &_left, &_right
+        width: 100%
+
+      &_left
+        justify-content: center
+        margin-bottom: 50px
+
 // ≥768px
 @media screen and (max-width: 768px)
-  .title-text
-    font-size: 30px
-    
-  .section-mt
-    margin-top: 30px
-    
-  /* header */ 
+  /* header */
+  .menu
+    &_fixed
+      bottom: auto
+      top: 90px
+      right: 25px
+
+      .menu
+        &__list
+          border: 2px solid $accent
+
+        &__link
+          &:hover
+            .menu__name
+              display: block
+
+  /* toggle-menu */ 
+  .toggle-menu
+    display: block
+    right: 30px
   
-  
+  /* advantages */
+  .advantages
+    .title-text
+      margin: 0 40px
+
+    &__list
+      flex-direction: column
+      align-items: center
+      margin-top: 30px
+
+    &__item
+      margin-top: 0
+      padding: 40px 20px 30px
+
+  /* resume */
+  .resume 
+    &__block
+      flex-direction: column
+
+    &__foto
+      width: 340px
+      margin: 0 auto
+
+    &__info
+      width: 100%
+      margin-top: 30px
+
+    &__text
+      margin-left: 10px
+
+  /* portfolio */
+  .portfolio
+    &__wrap
+      flex-direction: column
+      align-items: center
+      margin-top: 40px
+      margin-bottom: 10px
+
+    &__item
+      width: 320px
+      margin-bottom: 20px
+    
+      &:hover
+        .portfolio
+          &__inner
+            transform: none
+
+    &__inner
+      height: 460px
+      &::before
+        background: rgba(#ffffff, 0.70)
+
+    &__name
+      opacity: 1
+
+  /* contacts */
+  .contacts-list
+    align-items: center
+    margin: 40px auto
+
+  /* form */
+  .form
+    &_callback
+      margin: 20px auto
+      &::before
+        display: none
+
+  /* project */  
+  .project
+    &__block
+
+      &_left
+        width: 100%
+        margin-bottom: 40px
+
+      &_center
+        width: 35%
+        
+      &_right
+        width: 60%
+
+    &__wrap
+      margin-top: 30px
+
+    &__title
+      font-size: 26px
+
+    &__subtitle
+      font-size: 22px
+
+    &__text,  &__list-item
+      font-size: 16px
+
+  /* footer */
+  .footer
+    &__column
+      &_left
+        margin-bottom: 30px
+
+    &__block
+      &_contacts
+        flex-direction: column-reverse
+        align-items: center
+
+      &_payment
+        align-items: center
+        flex-wrap: wrap
+
+    &__btn
+      width: 280px
+      margin: 0 auto
+
+  .social
+    &__lst
+      margin-bottom: 20px
+    &__item
+      margin: 0 10px
+
+  .payment
+    &__text
+      margin: 0 auto
+      margin-top: 20px
+    &__lst
+      justify-content: center
+      margin: 0 auto
+    &__item
+      margin: 0 6px
+
+  /* modal */
+  .modal
+    &__close
+      top: 20px
+      right: 20px
+
+    &__wrap
+      width: 440px
+      height: 500px
+      overflow-y: scroll
+
+  /* form */
+  .form
+    &__textarea
+      height: 80px
+
+  .hidden
+    display: none!important
+
 // ≥576px
 @media screen and (max-width: 576px)
   .title-text
-    font-size: 25px
-    
-  /* header */ 
+    font-size: 28px
+
+  /* btn-top */
+  .btn-top
+    left: 10px
+
+  /* header */
+  .menu
+    &_fixed
+      right: 15px
+
+  /* toggle-menu */ 
+  .toggle-menu
+    right: 20px
+
+  /* top */
+  .top
+    &__wrap
+      z-index: 1
+
+    &__title
+      font-size: 38px
+
+    &__subtitle
+      font-size: 20px
+
+    &__btn
+      padding: 10px 30px
+
+    &__desc-btn
+      font-size: 12px
+      position: relative
+      z-index: 1
+
+  /* advantages */
+  .advantages
+    .title-text
+      margin: 0
+
+    &__item
+      width: 280px
+      margin-bottom: 20px
+
+  /* services */
+  .services
+    &__title
+      font-size: 22px
+    &__text
+      font-size: 16px
+
+  /* resume */
+  .resume
+    &__foto
+      width: 250px
+    &__info
+      padding-left: 0
+    &__text
+      margin-left: 0
+      font-size: 16px
+    &__skill
+      margin-left: 0
+
+  /* portfolio */
+  .portfolio
+    &__item
+      width: 260px
+    &__inner
+      height: 370px
+
+  /* contacts */
+  .contacts-list
+    &__item
+      font-size: 18px
+
+  /* project */  
+  .project
+    &__block
+      &_center
+        display: none
+      &_right
+        width: 100%
+
+    &__title
+      margin-bottom: 5px
+      font-size: 24px
+      line-height: 1
+
+    &__subtitle
+      margin-bottom: 5px
+      font-size: 20px
+      line-height: 1
+
+  /* footer */
+  .footer
+    padding: 20px 0
+
+    &__column
+      &_left
+        margin-bottom: 20px
+
+    &__block
+      padding: 0
+
+    &__btn
+      width: 260px
+      padding: 10px 5px
+
+    &__bottom
+      flex-direction: column
+      align-items: center
+
+    &__copyright
+      margin-bottom: 5px
+
+  .payment
+    &__text
+      width: 100%
+      text-align: center
+
+    &__lst
+      flex-wrap: wrap
+
+    &__item
+      width: auto
+      margin: 5px 15px
+      text-align: center
+
+  /* modal */
+  .modal
+    &__close
+      top: 10px
+      right: 10px
+      width: 20px
+      height: 20px
+
+      svg
+        width: 20px
+        height: 20px
+
+    &__wrap
+      width: 300px
+      height: 540px
+
+  /* form */
+  .form
+    &_callback
+      width: 290px
+
+    &__wrap
+      &_modal
+        width: 240px
+      
+    &__radio
+      display: flex
+      flex-wrap: wrap
+      font-size: 16px
   
+    &__radio-title
+      width: 100%
+      margin-bottom: 3px
   
+  .radio
+    width: 40%
+    margin-left: 0
