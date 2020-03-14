@@ -463,9 +463,13 @@
         </div>
         <div class="col-12 col-md-6">
           <form class="form form_callback" enctype="multipart/form-data" method="post">
-            <h3 class="form__title">Форма обратной связи</h3>
-            <div class="form__wrap">
+            <div class="form__success">
+              <span>Спасибо за вашу заявку!</span>
+            </div>
 
+            <h3 class="form__title">Форма обратной связи</h3>
+
+            <div class="form__wrap">
               <input class="form__field" name="name" type="text" placeholder="Ваше имя" required>
               <input class="form__field" name="phone" type="tel" placeholder="Ваш телефон" required>
               <textarea class="form__textarea" name="text" rows="6" placeholder="Ваш вопрос..." required></textarea>
@@ -585,7 +589,12 @@
 
     <div class="modal__wrap hidden">
       <form class="form form_modal" enctype="multipart/form-data" method="post">
+        <div class="form__success">
+          <span>Спасибо за вашу заявку!</span>
+        </div>
+
         <h3 class="form__title">Форма заявки</h3>
+
         <div class="form__wrap form__wrap_modal">
 
           <input class="form__field" name="name" type="text" placeholder="Ваше имя" required>

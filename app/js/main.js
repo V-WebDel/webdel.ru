@@ -150,16 +150,21 @@ $(function () {
       success: function(msg) {
         console.log(msg);
         if (msg == 'ok') {
-          $('.modal').trigger('reset'); // очистка формы
-          $(".modal__wrap").addClass("hidden");
-          $(".modal__overlay").addClass("hidden");
+          $('.form').find('.form__success').addClass('form__success_active').hide().fadeIn();
+          setTimeout(function() {
+            $('.form').find('.form__success').removeClass('form__success_active').fadeOut(); // скрытие сообщения об успешной отправки 
+            $('.modal__wrap, .modal__overlay').addClass('hidden'); // скрытие модального окна
+            $('.form').trigger('reset'); // очистка формы
+          }, 3000);
+          
         } else {
           alert('При отправки произошла ошибка!');
+          
         }
       }
     });
   });
-  
+
 });
 
 var lazyLoadInstance = new LazyLoad({

@@ -715,8 +715,9 @@ b, strong
 
 /* form */
 .form
+  position: relative
+
   &_callback
-    position: relative
     width: 420px
     margin: 40px auto
     
@@ -745,6 +746,34 @@ b, strong
 
     &_modal
       width: 400px
+
+  &__success
+    display: none
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    justify-content: center
+    align-items: center
+    font-family: $font-accent
+    font-size: 26px
+    font-weight: 900
+    color: $accent
+    text-transform: uppercase
+    z-index: 10
+
+    span 
+      margin: auto
+
+    & ~ *
+      transition: all .5s ease
+
+    &_active
+      display: flex
+      & ~ *
+        opacity: .5
+        filter: blur(3px)
 
   &__field
     width: 100%
