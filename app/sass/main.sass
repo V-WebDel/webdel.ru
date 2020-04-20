@@ -95,7 +95,7 @@ b, strong
   line-height: 1.2
 
   &_revers
-    color: #eeeeee
+    color: #f5f5f5
   
   &_ttn
     text-transform: none
@@ -601,41 +601,113 @@ b, strong
       bottom: 0
 
 
-/* portfolio */
-.portfolio
-  padding-bottom: 60px
+/* works */
+.works
+  padding-bottom: 40px
   background-color: $text
   color: #e0e0e0
+  text-align: center
 
-  &__wrap
-    display: flex
-    justify-content: space-between
-    flex-wrap: wrap
-    margin: 50px 10px 20px
+  &__link
+    position: relative
+    width: auto
+    font-size: 18px
+    font-family: $font-accent
+    font-weight: 700
+    color: #ffffff
+    text-align: center
+    transition: $slowdown
 
+    &::before
+      content: ''
+      position: absolute
+      bottom: -2px
+      left: 0
+      width: 100%
+      height: 2px
+      background-color: #ffffff
+      opacity: 0
+      transition: all 0.2s ease
+
+    &:hover
+      color: #d4d4d4
+      text-decoration: none
+      &::before
+        background-color: #d4d4d4
+        opacity: 1
+
+  .swiper
+    &-container
+      margin-top: 50px
+      margin-bottom: 10px
+
+    &-wrapper
+      padding-bottom: 40px
+
+    &-button-next, &-button-prev
+      top: auto
+      bottom: 10px
+      z-index: 2
+      width: 30px
+      height: 30px
+      transition: $slowdown
+
+      &::after
+        display: none
+
+      svg
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 30px
+        height: 30px
+        fill: $accent
+        transform: translate(-50%, -50%)
+
+    &-button-prev
+      left: 15%
+      
+    &-button-next
+      right: 15%
+      svg
+        transform: translate(-50%, -50%) rotate(180deg)
+
+    &-pagination
+      bottom: 15px
+      z-index: 1
+
+      &-bullet
+        margin: 0 6px!important
+        background-color: #ffffff
+        opacity: 0.8
+
+        &-active
+          background-color: $accent
+          transform: scale(1.5)
+
+.work
   &__item
     position: relative
     display: block
-    width: 340px
+    width: 320px
     height: auto
+    margin: 0 auto
     overflow: hidden
     margin-bottom: 25px
-    border: 7px solid $accent
+    border: 5px solid $accent
 
     &:hover
-      .portfolio
+      .work
         &__inner
           transform: scale(1.2)
           &::before
             background: rgba(#ffffff, 0.75)
-        
         &__name
           opacity: 1
 
   &__inner
     position: relative
     display: block
-    height: 485px
     background-color: #ffffff
     transition: all 0.5s ease
 
@@ -668,9 +740,6 @@ b, strong
     transform: translate(-50%, -50%)
     transition: $slowdown
 
-  &__btn
-    display: block
-    margin: 0 auto
 
 /* contacts */
 .contacts
@@ -954,6 +1023,73 @@ b, strong
         
     &_mobile
       width: 100%
+
+/* portfolio */
+.portfolio
+  padding-bottom: 50px
+  background-color: $text
+  color: #e0e0e0
+
+  &__wrap
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin: 50px 0 20px
+
+  &__item
+    position: relative
+    display: block
+    width: 260px
+    height: auto
+    overflow: hidden
+    margin-bottom: 25px
+    border: 5px solid $accent
+
+
+    &:hover
+      .portfolio
+        &__link
+          transform: scale(1.2)
+          &::before
+            background: rgba(#ffffff, 0.75)
+        
+        &__name
+          opacity: 1
+
+  &__link
+    position: relative
+    display: block
+    background-color: #ffffff
+    transition: all 0.5s ease
+
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+      width: 100%
+      height: 100%
+      background: rgba(#ffffff, 0.25)
+      transition: $slowdown
+
+  &__name
+    position: absolute
+    top: 50%
+    left: 50%
+    z-index: 2
+    display: block
+    width: 90%
+    padding: 10px
+    font-family: $font-accent
+    font-size: 16px
+    font-weight: 700
+    color: $text
+    line-height: 1.2
+    text-align: center
+    opacity: 0
+    transform: translate(-50%, -50%)
+    transition: $slowdown
 
 
 /* footer */
