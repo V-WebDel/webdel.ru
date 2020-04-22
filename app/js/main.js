@@ -3,16 +3,15 @@ $(function () {
   // Mask phone
   $('input[name="phone"]').mask('8 (999) 999 - 99 - 99');
 
+  
+  // Scroll menu
   var width = $(this).width();
 
-  // Scroll menu
   $(window).innerWidth(function () {
-
 
     if (width > 768) {
 
       $(".menu").removeClass("menu_hidden");
-
       $(this).scroll(function () {
         if ($(this).scrollTop() > 200) {
           $(".menu").addClass("menu_fixed");
@@ -29,10 +28,8 @@ $(function () {
 
   // Open & close menu
   $(".toggle-menu").click(function () {
-
     $(this).toggleClass("toggle-menu_open");
     $(this).siblings("header").find(".menu").toggleClass("menu_fixed menu_hidden");
-
     return false;
   });
 
@@ -43,13 +40,9 @@ $(function () {
     var id = $(this).attr('href'),
       top = $(id).offset().top;
 
-
-
     if (width < 768) {
       $(".menu__link").each(function () {
-
         $(this).find(".menu__name").removeClass("hidden");
-
         setTimeout(function () {
           $(".menu__link").find(".menu__name").addClass("hidden");
         }, 1500);
@@ -111,6 +104,26 @@ $(function () {
     }, "slow");
   });
 
+
+  // Skill animation
+  let block_scroll = $(".skill");
+  let counter = 0;
+
+  $(window).scroll(function() {
+
+    let scroll = $(window).scrollTop() + $(window).height();
+    let offset = block_scroll.offset().top + 300;
+   
+    if (scroll > offset && counter == 0) {
+      $(".skill__line").each(function (){
+        let skill = $(this).children(".skill__count").text();
+        $(this).animate({width: skill+"%"}, 1200);
+      });
+      counter = 1;
+    }
+  });
+
+
   // WOW
   var wow = new WOW({
     boxClass: 'wow',
@@ -126,10 +139,10 @@ $(function () {
   wow.init();
 
   // Animate.css
-  $('.top__title, .top__subtitle').addClass('animated fadeInLeft');
+  $('.top__title, .top__subtitle').addClass('animated lightSpeedIn');
+  $('.btn').addClass('animated lightSpeedIn');
+  $('.title-text').addClass('animated bounceInRight');
   $('.services__item').addClass('animated fadeInRight');
-  $('.btn').addClass('animated flash');
-  $('.title-text').addClass('animated zoomIn');
   $('.advantages__item').addClass('animated fadeInUp');
 
 

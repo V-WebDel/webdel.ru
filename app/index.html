@@ -271,19 +271,19 @@
               <h5 class="skill__text">HTML и CSS</h5>
               <div class="skill__wrap">
                 <div class="skill__line skill__line_htmlcss">
-                  <span class="skill__count">95</span>
+                  <span class="skill__count">99</span>
                 </div>
               </div>
               <h5 class="skill__text">jQuery и AJAX</h5>
               <div class="skill__wrap">
                 <div class="skill__line skill__line_jquery">
-                  <span class="skill__count">88</span>
+                  <span class="skill__count">85</span>
                 </div>
               </div>
               <h5 class="skill__text">JavaScript</h5>
               <div class="skill__wrap">
                 <div class="skill__line skill__line_js">
-                  <span class="skill__count">37</span>
+                  <span class="skill__count">42</span>
                 </div>
               </div>
               <h5 class="skill__text">PHP</h5>
@@ -787,9 +787,13 @@
 
     // Swiper slider
     var swiper_clinic = new Swiper('.swiper-works', {
-      speed: 1200,
+      speed: 1400,
       spaceBetween: 0,
       loop: true,
+
+      autoplay: {
+        delay: 5000,
+      },
 
       navigation: {
         nextEl: '.swiper-button-next',
