@@ -112,7 +112,7 @@ $(function () {
   $(window).scroll(function() {
 
     let scroll = $(window).scrollTop() + $(window).height();
-    let offset = block_scroll.offset().top + 300;
+    let offset = block_scroll.offset().top + 200;
    
     if (scroll > offset && counter == 0) {
       $(".skill__line").each(function (){
