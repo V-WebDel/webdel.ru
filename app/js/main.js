@@ -140,7 +140,7 @@ $(function () {
 
   // Animate.css
   $('.top__title, .top__subtitle').addClass('animated lightSpeedIn');
-  $('.btn').addClass('animated lightSpeedIn');
+  $('.btn').addClass('animated flash');
   $('.title-text').addClass('animated bounceInRight');
   $('.services__item').addClass('animated fadeInRight');
   $('.advantages__item').addClass('animated fadeInUp');
