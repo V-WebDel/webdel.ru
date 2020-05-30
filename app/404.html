@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <title>Webdel создание сайтов и верстка шаблонов</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Сайт-портфолио частного Frontend-разработчика. Оказываю услуги по созданию сайтов и HTML-верстке шаблонов. ">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900|Roboto:300,400,500,700&display=swap" rel="stylesheet"> 
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">
+  <link rel="stylesheet" href="./css/animate.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+
+</head>
+
+<body class="page-main">
+
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="header__line">
+            <a class="header__logo logo" href="#">
+              <span class="logo__name">WebDel</span>
+              <span class="logo__description">Создание сайтов</span>
+            </a>
+            <div class="header__wrap">
+              <nav class="header__menu menu">
+                <ul class="menu__list lst">
+                  <li class="menu__item">
+                    <a class="menu__link" href="#advantages">
+                      <svg class="menu__svg menu__svg_like">
+                        <use xlink:href="img/sprite.svg#like"></use>
+                      </svg>
+                      <span class="menu__name">Преимущества</span>
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#services">
+                      <svg class="menu__svg menu__svg_services">
+                        <use xlink:href="img/sprite.svg#customer-support"></use>
+                      </svg>
+                      <span class="menu__name">Услуги</span>
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#resume">
+                      <svg class="menu__svg menu__svg_business">
+                        <use xlink:href="img/sprite.svg#business"></use>
+                      </svg>
+                      <span class="menu__name">Резюме</span>
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="portfolio.html">
+                      <svg class="menu__svg menu__svg_briefcas">
+                        <use xlink:href="img/sprite.svg#briefcas"></use>
+                      </svg>
+                      <span class="menu__name">Портфолио</span>
+                    </a>
+                  </li>
+                  <li class="menu__item">
+                    <a class="menu__link" href="#contacts">
+                      <svg class="menu__svg menu__svg_contacts">
+                        <use xlink:href="img/sprite.svg#contact"></use>
+                      </svg>
+                      <span class="menu__name">Контакты</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <button class="toggle-menu no-btn">
+    <span></span>
+  </button>
+
+  <section class="error" id="particles-js">
+    <div class="container container-100">
+      <div class="row row-100">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <div class="error__wrap">
+            <h2 class="error__title">Ошибка 404</h2>
+            <p class="error__text">Извините, такой страницы не существует.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <button class="btn-top no-btn">
+    <svg>
+      <use xlink:href="img/sprite.svg#up-arrow"></use>
+    </svg>
+  </button>
+   
+  <div class="modal">
+
+    <div class="modal__overlay hidden">
+      <button class="no-btn modal__close">
+        <svg><use xlink:href="img/sprite.svg#close"></use></svg>
+      </button>
+    </div>
+
+    <div class="modal__wrap hidden">
+      <form class="form form_modal" enctype="multipart/form-data" method="post">
+        <div class="form__success">
+          <span>Спасибо за вашу заявку!</span>
+        </div>
+
+        <h3 class="form__title">Форма заявки</h3>
+
+        <div class="form__wrap form__wrap_modal">
+
+          <input class="form__field" name="name" type="text" placeholder="Ваше имя" required>
+          <input class="form__field" name="phone" type="tel" placeholder="Ваш телефон" required>
+
+          <select class="form__select" name="service" aria-invalid="false">
+            <option disabled selected>Выбрать услугу</option>
+            <option value='Создание сайта "Под ключ"'>Создание сайта</option>
+            <option value="HTML-верстка шаблона">HTML-верстка шаблона</option>
+            <option value="Сайт на WordPress">Сайт на CMS WordPress</option>
+            <option value="Модернизация сайта">Правки на готовом сайте</option>
+          </select>
+          <textarea class="form__textarea" name="text" rows="6" placeholder="Краткое описание проекта"></textarea>
+          
+          <div class="form__radio">
+            <span class="form__radio-title">Время на разработку:</span>
+            <div class="radio">
+              <input class="radio__input" id="urgently" name="time" type="radio" value="Срочно" checked>
+              <label class="radio__label" for="urgently"><span></span>Срочно</label>
+            </div>
+            <div class="radio">
+              <input class="radio__input" id="not_urgent" name="time" type="radio" value="Не срочно">
+              <label class="radio__label" for="not_urgent"><span></span>Не срочно</label>
+            </div>
+          </div>
+
+          <div class="form__radio">
+            <span class="form__radio-title">Есть ли ТЗ?</span>
+            <div class="radio">
+              <input class="radio__input" id="no" name="TZ" type="radio" value="Нет" checked>
+              <label class="radio__label" for="no"><span></span>Нет</label>
+            </div>
+            <div class="radio">
+              <input class="radio__input" id="yes" name="TZ" type="radio" value="Есть">
+              <label class="radio__label" for="yes"><span></span>Есть</label>
+            </div>
+          </div>
+          
+          <button class="form__btn form__btn_modal btn" type="submit">Отправить заявку</button>
+          
+          <label class="form__checkbox checkbox">
+            <input class="checkbox__default" type="checkbox" name="checkbox" value="ready" checked required>
+            <span class="checkbox__new"></span>
+            Нажимая на кнопку, вы даете <a href="/personal.php">согласие на обработку своих персональных данных</a>
+          </label>
+        </div>
+      </form>
+    </div>
+
+  </div>
+   
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/jquery.maskedinput.min.js"></script>
+  <script src="./js/svgxuse.min.js"></script>
+  <script src="./js/swiper.min.js"></script>
+  <script src="./js/wow.min.js"></script>
+  <script src="./js/particles.min.js"></script>
+  <script src="./js/lazyload.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 110,
+          "density": {
+            "enable": true,
+            "value_area": 1000
+          }
+        },
+        "color": {
+          "value": "#d9faff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 30,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 180,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 4,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": false,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": false,
+            "mode": "repulse"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true,
+      "config_demo": {
+        "hide_card": false,
+        "background_color": "#005792",
+        "background_image": "",
+        "background_position": "50% 50%",
+        "background_repeat": "no-repeat",
+        "background_size": "cover"
+      }
+    });
+
+    // Swiper slider
+    var swiper_clinic = new Swiper('.swiper-works', {
+      speed: 1400,
+      spaceBetween: 0,
+      loop: true,
+
+      autoplay: {
+        delay: 5000,
+      },
+
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      breakpoints: {
+        992: { 
+          slidesPerView: 3,
+          centeredSlides: true,
+        }, 
+        576: { 
+          slidesPerView: 2,
+          centeredSlides: false,
+        },
+        320: { 
+          slidesPerView: 1,
+          centeredSlides: true,
+        }, 
+      },
+    });
+  </script>
+
+</body>
+</html>
