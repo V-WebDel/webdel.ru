@@ -11,7 +11,6 @@ $(function () {
 
     if (width > 768) {
 
-      $(".menu").removeClass("menu_hidden");
       $(this).scroll(function () {
         if ($(this).scrollTop() > 200) {
           $(".menu").addClass("menu_fixed");
@@ -23,6 +22,7 @@ $(function () {
     } else {
       $(".menu").addClass("menu_hidden");
     }
+
   });
 
 
