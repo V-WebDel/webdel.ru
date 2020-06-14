@@ -139,7 +139,7 @@ $(function () {
   wow.init();
 
   // Animate.css
-  $('.top__title, .top__subtitle').addClass('animated lightSpeedIn');
+  $('.top__title, .top__subtitle, .top__uptitle').addClass('animated fadeInUp');
   $('.btn').addClass('animated flash');
   $('.title-text').addClass('animated bounceInRight');
   $('.services__item').addClass('animated fadeInRight');

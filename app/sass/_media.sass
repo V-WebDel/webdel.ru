@@ -74,9 +74,11 @@
 
   .top
     &__title
-      font-size: 50px
+      font-size: 55px
+    &__uptitle
+      font-size: 22px
     &__subtitle
-      font-size: 24px
+      font-size: 22px
     &__desc-btn
       font-size: 12px
 
@@ -165,19 +167,25 @@
         justify-content: center
         margin-bottom: 50px
 
+    &__block
+      &_contacts
+        justify-content: center
+
 // ≥768px
 @media screen and (max-width: 768px)
   .section
     padding-top: 40px
 
   .menu
+    display: none
+
     &_fixed
+      display: block
       bottom: auto
       top: 90px
       right: 25px
 
       .menu
-        
         &__list
           border: 2px solid $accent
 
@@ -345,10 +353,13 @@
       z-index: 1
 
     &__title
-      font-size: 38px
+      font-size: 44px
+
+    &__uptitle
+      font-size: 18px
 
     &__subtitle
-      font-size: 20px
+      font-size: 18px
 
     &__btn
       padding: 10px 30px
@@ -509,3 +520,18 @@
   .radio
     width: 40%
     margin-left: 0
+
+// ≥400px
+@media screen and (max-width: 400px)
+  .top
+
+    &__title
+      margin-bottom: 15px
+      font-size: 34px
+
+    &__uptitle
+      margin-bottom: 12px
+      font-size: 18px
+
+    &__subtitle
+      font-size: 18px
